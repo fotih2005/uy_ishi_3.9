@@ -111,21 +111,21 @@ const data = [
     return content;
   }
   for (i = 0; i <= data.length -1; i++){
-    const  card = Element(`li`,'user card d-inline-block col-12 col-lg-4 col-md-6 col-xl-3 px-2');
-    const  wrapper = Element(`div`,'user__content card-body');
-    const  userImg = Element(`img`,'user__img card-img');
-    userImg.src = data[i].src;
-    const userName = Element(`h3`,'user__fullname h5 mt-3');
-    textContent(userName,[data[i].first_name + ' ' + data[i].last_name]);
+    const  card = Element(`li`,'user card d-inline-block col-12 col-lg-4 col-md-6 col-xl-3 px-2')
+    const  wrapper = Element(`div`,'user__content card-body')
+    const  userImg = Element(`img`,'user__img card-img')
+    userImg.src = data[i].src
+    const userName = Element(`h3`,'user__fullname h5 mt-3')
+    textContent(userName,[data[i].first_name + ' ' + data[i].last_name])
     const userEmail = Element(`a`,'user__email h6 text-primary d-block')
     textContent(userEmail,data[i].email)
-    const userGander = Element(`p`,'user__gender h6');
+    const userGander = Element(`p`,'user__gender h6')
     textContent(userGander,data[i].gender)
-    const userIp = Element(`p`,'user__address text-bg-info rounded text-white ps-2');
+    const userIp = Element(`p`,'user__address text-bg-info rounded text-white ps-2')
     textContent(userIp,data[i].ip_address)
-    wrapper.append(userImg, userName, userEmail, userGander, userIp);
-    card.append(wrapper);
-    userList.append(card);
+    wrapper.append(userImg, userName, userEmail, userGander, userIp)
+    card.append(wrapper)
+    userList.append(card)
   }
 list.append(userList)
   
